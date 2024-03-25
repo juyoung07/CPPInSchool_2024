@@ -7,6 +7,6 @@ int main(void) {
 	// 4바이트 차이 (x86으로 설정하기)
 	printf("%d %d \n", &arr[0], &arr[1]);
 
-	// 1바이트 차이
-	printf("%d %d", &str[0], &str[1]);
+	// 4바이트 차이 (위와 결과가 동일)
+	printf("%d %d", arr, arr+1);
 }
