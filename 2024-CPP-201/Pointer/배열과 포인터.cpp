@@ -1,12 +1,18 @@
 #include <stdio.h>
 
 int main(void) {
-	int arr[4];
-	char str[4];
+	int arr[4] = { 10, 20, 30, 40 };
+	char str[4] = "swa";
 
-	// 4바이트 차이 (x86으로 설정하기)
-	printf("%d %d \n", &arr[0], &arr[1]);
+	int* pi = arr;
+	char* pc = str;
 
-	// 4바이트 차이 (위와 결과가 동일)
-	printf("%d %d", arr, arr+1);
+	// 두 코드의 결과는 같음
+	printf("%d %d\n", arr[0], arr[1]);
+	printf("%d %d\n\n", *(arr), *(arr + 1));
+
+	printf("%d %d\n", *(pi), *(pi + 1));
+	printf("%d %d\n", pi[0], pi[1]);
+	printf("%c %c\n", *(pc), *(pc + 1));
+	printf("%c %c\n", pc[0], pc[1]);
 }
