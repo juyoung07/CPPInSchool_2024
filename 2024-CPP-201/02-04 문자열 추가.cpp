@@ -1,13 +1,15 @@
-#include <stdio.h>
+#include <iostream>
 #include <string.h>
 
 using namespace std;
 
+using namespace std;
+
 void main(void) {
-	char str[100] = "Juyoung";
+	string str = "Juyoung";
 
 	// 문자열 추가
-	strcat(str, " is pretty 🥰");
+	str += " is pretty 🥰";
 
-	printf("%s ", str);
+	cout << str;
 }
