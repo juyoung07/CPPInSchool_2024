@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 void main(void) {
 	char str[100] = "Juyoung";
@@ -6,12 +7,8 @@ void main(void) {
 
 	// str에 있는 내용을 str2에 복사하기
 
-	int i = 0;
-
-	for (;  str[i] != '\0'; i++) {
-		str2[i] = str[i];
-	}
-	str2[i] = str[i];
+	
+	strcpy(str2, str);
 
 	printf("%s", str2);
 }
