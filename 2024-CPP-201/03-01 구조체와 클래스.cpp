@@ -14,6 +14,7 @@ public:
 	}
 private:
 	// 이름 구분을 위해 _를 씀
+	// 직접적으로 접근하진 못함
 	int grade_;
 	string name_;
 };
