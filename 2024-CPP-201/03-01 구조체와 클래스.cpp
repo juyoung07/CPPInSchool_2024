@@ -3,14 +3,14 @@
 
 using namespace std;
 
-// 구조체는 default가 public
-struct Student {
+// 클래스는 default가 private
+class Student {
 	int grade_;
 	string name_;
 };
 
 void main(void) {
-	struct Student juyoung;
+	Student juyoung;
 
 	juyoung.grade_ = 2115;
 	juyoung.name_ = "윤주영";
