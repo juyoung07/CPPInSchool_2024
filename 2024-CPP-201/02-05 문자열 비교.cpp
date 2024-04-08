@@ -6,9 +6,7 @@ using namespace std;
 void main(void) {
 	string str = "Juyoung";
 
-	// 문자열 비교
-	if (str == "Jiyoung")
-		cout << "같은 단어";
-	else
-		cout << "다른 단어";
+	// 문자열 길이 (널 따지지 않음)
+	cout << str.size() << endl;
+	cout << str.length() << endl;
 }
