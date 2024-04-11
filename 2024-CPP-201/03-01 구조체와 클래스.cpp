@@ -12,6 +12,12 @@ public:
 		grade_ = grade;
 		name_ = name;
 	}
+
+	// 생성자 오버로딩
+	Student() {
+		grade_ = 2121;
+		name_ = "JWP";
+	}
 private:
 	// 이름 구분을 위해 _를 씀
 	// 직접적으로 접근하진 못함
@@ -23,5 +29,6 @@ void main(void) {
 	// 매개변수가 없는 생성자를 호출
 	// Student juyoung = Student();
 	Student juyoung = Student(2115, "윤주영");	
+	Student jwp = Student();
 	
 }
