@@ -18,6 +18,11 @@ public:
 		grade_ = 2121;
 		name_ = "JWP";
 	}
+
+	// 객체의 멤버를 출력하는 함수
+	void print(void) {
+		cout << "학번: " << grade_ << ", 이름: " << name_ << endl;
+	}
 private:
 	// 이름 구분을 위해 _를 씀
 	// 직접적으로 접근하진 못함
@@ -31,4 +36,6 @@ void main(void) {
 	Student juyoung = Student(2115, "윤주영");	
 	Student jwp = Student();
 	
+	juyoung.print();
+	jwp.print();
 }
