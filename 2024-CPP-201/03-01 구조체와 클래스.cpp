@@ -11,6 +11,8 @@ public:
 	Student(int grade, string name)
 		: grade_(grade), name_(name)
 	{
+		// this : 객체 자기 자신을 가리키는 포인터
+		this->grade_ = grade;
 	}
 
 	// 생성자 오버로딩
