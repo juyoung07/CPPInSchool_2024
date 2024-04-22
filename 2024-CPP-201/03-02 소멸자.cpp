@@ -21,6 +21,7 @@ public:
 	// 소멸자 : 객체가 사라질 때(메모리 공간이 해제될 때) 호출되는 함수
 	~Student() {
 		delete []name_;
+		cout << "소멸자 호출 완료" << endl;
 	}
 
 	void print(void) {
@@ -33,6 +34,11 @@ private:
 };
 
 void main(void) {
-	Student stu = Student(2115, (char*)"윤주영");
-	stu.print();
+	Student *stu = new Student(2115, (char*)"윤주영");
+
+	cout << "사필규정" << endl;		// 최규정 선생님 사랑합니다.
+
+	delete stu;
+
+	cout << "고진감래" << endl;		// 가보자고~
 }
