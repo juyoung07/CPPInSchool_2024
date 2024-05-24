@@ -27,5 +27,8 @@
     <ClCompile Include="gunwoExam03.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="gunwooTExam01.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
