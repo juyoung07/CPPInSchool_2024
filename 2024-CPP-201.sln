@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2024-CPP-201", "2024-CPP-201\2024-CPP-201.vcxproj", "{F9C08A51-FFF9-4071-8576-20F6F610E794}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BircksGame", "..\BircksGame\BircksGame.vcxproj", "{3CA7ED1E-E947-43CB-8667-8565BF99EF1A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F9C08A51-FFF9-4071-8576-20F6F610E794}.Debug|x64.ActiveCfg = Debug|x64
-		{F9C08A51-FFF9-4071-8576-20F6F610E794}.Debug|x64.Build.0 = Debug|x64
-		{F9C08A51-FFF9-4071-8576-20F6F610E794}.Debug|x86.ActiveCfg = Debug|Win32
-		{F9C08A51-FFF9-4071-8576-20F6F610E794}.Debug|x86.Build.0 = Debug|Win32
-		{F9C08A51-FFF9-4071-8576-20F6F610E794}.Release|x64.ActiveCfg = Release|x64
-		{F9C08A51-FFF9-4071-8576-20F6F610E794}.Release|x64.Build.0 = Release|x64
-		{F9C08A51-FFF9-4071-8576-20F6F610E794}.Release|x86.ActiveCfg = Release|Win32
-		{F9C08A51-FFF9-4071-8576-20F6F610E794}.Release|x86.Build.0 = Release|Win32
+		{3CA7ED1E-E947-43CB-8667-8565BF99EF1A}.Debug|x64.ActiveCfg = Debug|x64
+		{3CA7ED1E-E947-43CB-8667-8565BF99EF1A}.Debug|x64.Build.0 = Debug|x64
+		{3CA7ED1E-E947-43CB-8667-8565BF99EF1A}.Debug|x86.ActiveCfg = Debug|Win32
+		{3CA7ED1E-E947-43CB-8667-8565BF99EF1A}.Debug|x86.Build.0 = Debug|Win32
+		{3CA7ED1E-E947-43CB-8667-8565BF99EF1A}.Release|x64.ActiveCfg = Release|x64
+		{3CA7ED1E-E947-43CB-8667-8565BF99EF1A}.Release|x64.Build.0 = Release|x64
+		{3CA7ED1E-E947-43CB-8667-8565BF99EF1A}.Release|x86.ActiveCfg = Release|Win32
+		{3CA7ED1E-E947-43CB-8667-8565BF99EF1A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
