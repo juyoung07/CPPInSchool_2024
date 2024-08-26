@@ -16,21 +16,10 @@ public:
 	{
 		cout << "Animal 소멸자" << endl;
 	}
-
-	virtual void bark()		// 가상 함수
-	{
-		cout << "잘 짖는다" << endl;
-	}
-
-	virtual void sleep()
-	{
-		cout << "잘 잔다" << endl;
-	}
-
-	virtual void eat()
-	{
-		cout << "잘 먹는다" << endl;
-	}
+	// 실체가 없으므로 순수 가상 함수로 처리(정의)하고, 자식 클래스에서 구현
+	virtual void bark() = 0;
+	virtual void sleep() = 0;
+	virtual void eat() = 0;
 
 private:
 	string name_;
@@ -72,11 +61,13 @@ private:
 
 
 void main(void)
-{
+{	
+	// 순수 가상 함수가 있는 (추상 클래스) 객체 생성이 불가능
 	Animal* ani = new Animal("정민레이디", 18);
 	ani->bark();
 	ani->eat();
 	ani->sleep();
+	 
 	delete ani;
 
 	// ani의 자료형은 Animal*
