@@ -17,11 +17,15 @@ public:
 		cout << "아름다움 : " << beauty_ << endl;
 	}
 
-private:
+	// 자식 클래스에서 구현
+	virtual void attack(Clothes* target) = 0;
+
 	string name_;
 	int price_;
 	int making_time_;
 	int beauty_;
+private:
+	
 };
 
 class Hanbok : public Clothes {
@@ -34,6 +38,11 @@ public:
 		Clothes::show();
 		cout << "노리개 갯수 : " << norigae_ << endl;
 		cout << "저고리 갯수 : " << jugori_ << endl;
+	}
+
+	void attack(Clothes* target) 
+	{
+		target->beauty_ -= beauty_;
 	}
 
 private:
@@ -51,6 +60,12 @@ public:
 		Clothes::show();
 		cout << "오비 갯수 : " << belt_ << endl;
 	}
+
+	void attack(Clothes* target)
+	{
+		target->beauty_ -= beauty_;
+	}
+
 private:
 	int belt_;				// 오비
 };
@@ -65,16 +80,29 @@ public:
 		Clothes::show();
 		cout << "자수 갯수? : " << embroidery_ << endl;
 	}
+
+	void attack(Clothes* target)
+	{
+		target->beauty_ -= beauty_;
+	}
+
 private:
 	int embroidery_;		// 자수
 };
 
-void main(void) {
+int main(void) {
 	Clothes* player = new Hanbok("곤룡포", 100, 10, 100, 0, 0);
 	Clothes* friendy = new Kimono("나마에와", 100, 5, 100, 1);
 
 	player->show();
 	friendy->show();
+
+	cout << "-----------------------------------------------------" << endl;
+	cout << "1, 공격" << endl;
+	cout << "2. 특수공격 1" << endl;
+	cout << "3, 특수공격 2" << endl;
+	cout << "4, 도망" << endl;
+
 	
 	delete friendy;
 	delete player;
