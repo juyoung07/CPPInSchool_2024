@@ -32,7 +32,9 @@ private:
 class Hanbok : public Clothes {
 public:
 	Hanbok(string name, int price, int making_time, int beauty, int norigae, int jugori) : Clothes(name, price, making_time, beauty), norigae_(norigae), jugori_(jugori)
-	{}
+	{
+		attack_count_ = 0;
+	}
 
 	void show()
 	{
@@ -41,14 +43,22 @@ public:
 		cout << "저고리 갯수 : " << jugori_ << endl;
 	}
 
-	void attack(Clothes* target) 
+	void attack(Clothes* target) override
 	{
-		target->beauty_ -= beauty_;
+		attack_count_++;
+
+		if (attack_count_ == 3) {
+			target->beauty_ -= beauty_ * 2;
+			attack_count_ = 0;
+		}
+		else
+			target->beauty_ -= beauty_;
 	}
 
 private:
 	int norigae_;			// 노리개
 	int jugori_;			// 저고리
+	int attack_count_;
 };
 
 class Kimono : public Clothes {
@@ -62,9 +72,9 @@ public:
 		cout << "오비 갯수 : " << belt_ << endl;
 	}
 
-	void attack(Clothes* target)
+	void attack(Clothes* target) override
 	{
-		target->beauty_ -= beauty_;
+		// 매 3타마다 치명타를 주기
 	}
 
 private:
@@ -82,7 +92,7 @@ public:
 		cout << "자수 갯수? : " << embroidery_ << endl;
 	}
 
-	void attack(Clothes* target)
+	void attack(Clothes* target) override
 	{
 		target->beauty_ -= beauty_;
 	}
@@ -95,6 +105,7 @@ int main(void) {
 	Clothes* player = new Hanbok("곤룡포", 100, 10, 100, 0, 0);
 	Clothes* friendy = new Kimono("나마에와", 100, 5, 100, 1);
 	int choice;
+	int count = 0;
 
 	while (true)
 	{
