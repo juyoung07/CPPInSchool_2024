@@ -7,6 +7,9 @@ using namespace std;
 void main(void) {
 	vector<string> jy;
 
+	// 미리 백터의 크기를 지정하는 것이 좋다. (성능.. 속도와 저장공간)
+	jy.reserve(100);
+
 	// 요소 추가
 	jy.push_back("윤주영");
 	jy.push_back("주영");
