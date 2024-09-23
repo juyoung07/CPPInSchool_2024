@@ -34,8 +34,10 @@ void main(void) {
 
 	// 마지막 요소 삭제
 	jy.pop_back();
-	cout << jy.at(0) << "을 부르는 방법들" << endl;
-	for (int i = 1; i < jy.size(); i++) {
-		cout << jy.at(i) << endl;
-	}
+	cout << jy[0] << "을 부르는 방법들" << endl;
+
+	vector<string>::iterator iter;
+	for (iter = jy.begin(); iter != jy.end(); iter++)  // 시작 : begin, 끝의 다음 : end
+		cout << *iter << endl;
+	
 }
