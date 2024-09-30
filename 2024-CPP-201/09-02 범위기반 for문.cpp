@@ -4,17 +4,9 @@
 using namespace std;
 
 int main(void) {
-    vector<int> arr;
+    vector<int> arr = { 201, 202, 203, 204 };
 
-    arr.reserve(4);
-
-    arr.push_back(201);
-    arr.push_back(202);
-    arr.push_back(203);
-    arr.push_back(204);
-
-    for (int i = 0; i < arr.size(); i++) {
-        cout << arr[i] << endl;
+    for (int x : arr) {
+        cout << x << endl;
     }
-
 }
