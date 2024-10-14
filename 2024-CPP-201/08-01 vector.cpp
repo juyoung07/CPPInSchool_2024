@@ -36,8 +36,8 @@ void main(void) {
 	jy.pop_back();
 	cout << jy[0] << "을 부르는 방법들" << endl;
 
-	vector<string>::iterator iter;
-	for (iter = jy.begin(); iter != jy.end(); iter++)  // 시작 : begin, 끝의 다음 : end
+	// vector<string>::iterator iter;
+	for (auto iter = jy.begin(); iter != jy.end(); iter++)  // 시작 : begin, 끝의 다음 : end
 		cout << *iter << endl;
 	
 }
