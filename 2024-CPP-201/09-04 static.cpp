@@ -14,6 +14,7 @@ public:
 		num_++;
 	}
 
+	// static 멤버 함수에는 일반 멤버 변수가 들어갈 수 없음
 	static int* get_num_address(void) { return &num_; }
 	static int get_num(void) { return num_; }
 	int* get_gam_address(void) { return &gam_; }
