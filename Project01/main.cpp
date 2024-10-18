@@ -7,7 +7,7 @@ using namespace std;
 #define WINDOW_HEIGHT 800
 
 void main(void) {
-	RenderWindow window(VideoMode(1200, 800), "Project");
+	RenderWindow window(VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "Project");
 
 	while (window.isOpen())
 	{
