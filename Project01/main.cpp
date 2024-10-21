@@ -10,6 +10,7 @@ enum App {
 
 void main(void) {
 	RenderWindow window(VideoMode(App::WIDTH, App::HEIGHT), "Project");
+	window.setFramerateLimit(60);
 
 	while (window.isOpen())
 	{
